@@ -121,9 +121,9 @@ abra no arquivo "D:\Workspace\Repositories\DeliverySystem\target\jacoco-report\i
 
 | Atividade              | Responsável      | Data Início | Data Fim    |
 |------------------------|------------------|-------------|-------------|
-| Escrita dos testes     | Pedro e Olivier  | 06/06/2025  | 10/06/2025  |
-| Execução dos testes    | Pedro e Olivier  | 06/06/2025  | 10/06/2025  |
-| Análise de resultados  | Pedro e Olivier  | 06/06/2025  | 10/06/2025  |
+| Escrita dos testes     | Pedro e Olivier  | 10/06/2025  | 10/06/2025  |
+| Execução dos testes    | Pedro e Olivier  | 10/06/2025  | 10/06/2025  |
+| Análise de resultados  | Pedro e Olivier  | 10/06/2025  | 10/06/2025  |
 
 ---
 
@@ -133,6 +133,8 @@ abra no arquivo "D:\Workspace\Repositories\DeliverySystem\target\jacoco-report\i
 |--------------|---------------|
 | Pedro Belém  | QA / PO / Dev |
 | Olivier Leal | QA / SM / Dev |
+
+---
 
 ## 14. 📷 Imagens
 
@@ -156,6 +158,11 @@ abra no arquivo "D:\Workspace\Repositories\DeliverySystem\target\jacoco-report\i
 
 ### DeliveryServiceTestRunFail
 ![DeliveryServiceTestRunFail](https://github.com/pbelem/DeliverySystem/blob/main/assets/DeliveryServiceTestRunFail.png)
+
+---
+
+## 15. 🏁 QR code do Repositório
+![QRCode_DeliverySystem](https://github.com/pbelem/DeliverySystem/blob/main/assets/QRCode_DeliverySystem.png)
 
 
 
