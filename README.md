@@ -37,25 +37,24 @@ Garantir que o sistema de delivery funcione corretamente, validando funcionalida
 
 ### ❌ Excluído:
 - Integrações com APIs externas (ex: mapas, pagamentos)  
-- Testes de interface gráfica  
-- Testes de front-end  
+- Testes de interface gráfica, front-end 
 - Testes de integração  
 
 ---
 
 ## 4. 🚪 Critérios de Entrada
 
-- Código da classe `Calculadora` concluído e compilável  
+- Código  concluído e compilável  
 - Ambiente de testes configurado (IDE, JDK, dependências JUnit)  
 - Casos de uso definidos para as operações  
-- Estratégia de versionamento (ex: GitHub com branch `develop` para testes)  
+- Estratégia de versionamento com Github
 
 ---
 
 ## 5. 🚪 Critérios de Saída
 
-- Todos os testes automatizados devem passar sem falhas  
-- Todos os requisitos testáveis atendidos  
+- Todos os testes devem passar sem falhas  
+- Todos os requisitos testáveis atendidos
 - Relatório de cobertura com no mínimo 90% (ex: com JaCoCo)  
 
 ---
@@ -63,8 +62,8 @@ Garantir que o sistema de delivery funcione corretamente, validando funcionalida
 ## 6. ✅ Critérios de Aceitação
 
 - Todos os métodos devem retornar os valores esperados com entradas válidas  
-- O sistema deve lançar exceções para entradas inválidas (ex: divisão por zero)  
-- Os nomes de métodos, variáveis e mensagens de erro devem seguir o padrão definido no projeto  
+- O sistema deve lançar exceções para entradas inválidas  
+- Os nomes de métodos, variáveis e mensagens de erro devem seguir o padrão definido no projeto
 
 ---
 
@@ -81,36 +80,46 @@ Garantir que o sistema de delivery funcione corretamente, validando funcionalida
 
 ## 8. 🧪 Casos de Teste
 
-| ID     | Nome do Teste               | Entrada   | Saída Esperada | Resultado Esperado             |
-|--------|-----------------------------|-----------|----------------|-------------------------------|
-| TC001  | Soma simples                | 2, 3      | 5              | Deve retornar 5               |
-| TC002  | Subtração                   | 10, 7     | 3              | Deve retornar 3               |
-| TC003  | Divisão por zero            | 10, 0     | Exceção        | ArithmeticException           |
-| TC004  | Multiplicação de negativos  | -2, -4    | 8              | Deve retornar 8               |
-| TC005  | Divisão com resultado exato | 20, 4     | 5              | Deve retornar 5               |
+| ID     | Nome do Teste                       | Entrada        | Saída Esperada                  | Resultado Esperado                         |
+|--------|-------------------------------------|----------------|---------------------------------|--------------------------------------------|
+| TC001  | testCalculateFreight_ValidDistance  | 10.0           | 25                              | Frete deve ser 10km * 2.5 = 25.0           |
+| TC002  | testCalculateFreight_ZeroDistance   | 0.0            | exception.getMessage()          | Distância deve ser maior que zero          |
+| TC003  | testUpdateStatus                    | updateStatus() | order.getStatus() == PROCESSING | Status deve ser atualizado para PROCESSING |
+
+
 
 ---
 
 ## 9. ⚠️ Riscos
 
-| Tipo     | Descrição                                       | Mitigação                |
-|----------|--------------------------------------------------|--------------------------|
-| Técnico  | Falta de cobertura de testes em edge cases       | Revisão manual + JaCoCo |
-| Humano   | Implementação incorreta dos testes               | Revisão de pares + PRs  |
-| Ferramenta | Erros de build por configuração incorreta       | Pipeline de CI          |
+| Tipo       | Descrição                                  | Mitigação               |
+|------------|--------------------------------------------|-------------------------|
+| Técnico    | Falta de cobertura de testes em edge cases | Revisão manual + JaCoCo |
+| Humano     | Implementação incorreta dos testes         | Revisão de pares + PRs  |
+| Ferramenta | Erros de build por configuração incorreta  | Pipeline de CI          |
 
 ---
 
 ## 10. 📊 Métricas de Teste
 
-- Cobertura de código (%)  
+- Cobertura de código (70%)  
 - Número de testes executados  
 - Número de falhas  
 - Tempo de execução médio  
 
 ---
 
-## 11. 📅 Cronograma de Testes
+
+## 11 ☕ JaCoCo
+```bash
+cd "C:\Workspace\Repositories\DeliverySystem"
+mvn clean verify
+```
+
+
+---
+
+## 12. 📅 Cronograma de Testes
 
 | Atividade              | Responsável     | Data Início | Data Fim    |
 |------------------------|------------------|-------------|-------------|
@@ -120,13 +129,35 @@ Garantir que o sistema de delivery funcione corretamente, validando funcionalida
 
 ---
 
-## 12. ✅ Aprovação
+## 13. ✅ Aprovação
 
 | Nome         | Cargo         |
 |--------------|---------------|
 | Pedro Belém  | QA / PO / Dev |
 | Olivier Leal | QA / SM / Dev |
 
-##13. 📷 Imagens
+## 14. 📷 Imagens
+
+### DeliveryService
+![DeliveryService](https://github.com/pbelem/DeliverySystem/blob/main/assets/DeliveryService.png)
+
+### Order
+![Order](https://github.com/pbelem/DeliverySystem/blob/main/assets/Order.png)
+
+### OrderStatus
+![OrderStatus](https://github.com/pbelem/DeliverySystem/blob/main/assets/OrderStatus.png)
+
+### SampleTest
+![SampleTest](https://github.com/pbelem/DeliverySystem/blob/main/assets/SampleTest.png)
+
+### DeliveryServiceTest
+![DeliveryServiceTest](https://github.com/pbelem/DeliverySystem/blob/main/assets/DeliveryServiceTest.png)
+
+### DeliveryServiceTestRunOk
+![DeliveryServiceTestRunOk](https://github.com/pbelem/DeliverySystem/blob/main/assets/DeliveryServiceTestRunOk.png)
+
+### DeliveryServiceTestRunFail
+![DeliveryServiceTestRunFail](https://github.com/pbelem/DeliverySystem/blob/main/assets/DeliveryServiceTestRunFail.png)
+
 
 
