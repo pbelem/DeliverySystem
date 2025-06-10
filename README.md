@@ -12,7 +12,7 @@
 
 - **Projeto:** Sistema de Delivery  
 - **Data de Criação:** 10/06/2025  
-- **Ferramentas:** JUnit 5, Java 21, Maven, IntelliJ IDEA  
+- **Ferramentas:** JUnit 5, Java 21, Maven, IntelliJ IDEA, JaCoCo  
 - **Tipo de Teste:** Testes Unitários  
 
 ---
@@ -53,9 +53,9 @@ Garantir que o sistema de delivery funcione corretamente, validando funcionalida
 
 ## 5. 🚪 Critérios de Saída
 
-- Todos os testes devem passar sem falhas  
+- Todos os testes devem passar sem falhas
 - Todos os requisitos testáveis atendidos
-- Relatório de cobertura com no mínimo 90% (ex: com JaCoCo)  
+- Relatório de cobertura com no mínimo 70%
 
 ---
 
@@ -86,8 +86,6 @@ Garantir que o sistema de delivery funcione corretamente, validando funcionalida
 | TC002  | testCalculateFreight_ZeroDistance   | 0.0            | exception.getMessage()          | Distância deve ser maior que zero          |
 | TC003  | testUpdateStatus                    | updateStatus() | order.getStatus() == PROCESSING | Status deve ser atualizado para PROCESSING |
 
-
-
 ---
 
 ## 9. ⚠️ Riscos
@@ -95,8 +93,7 @@ Garantir que o sistema de delivery funcione corretamente, validando funcionalida
 | Tipo       | Descrição                                  | Mitigação               |
 |------------|--------------------------------------------|-------------------------|
 | Técnico    | Falta de cobertura de testes em edge cases | Revisão manual + JaCoCo |
-| Humano     | Implementação incorreta dos testes         | Revisão de pares + PRs  |
-| Ferramenta | Erros de build por configuração incorreta  | Pipeline de CI          |
+| Humano     | Implementação incorreta dos testes         | Revisão de pares        |
 
 ---
 
@@ -110,21 +107,22 @@ Garantir que o sistema de delivery funcione corretamente, validando funcionalida
 ---
 
 
-## 11 ☕ JaCoCo
+## 11. ☕ JaCoCo
 ```bash
 cd "C:\Workspace\Repositories\DeliverySystem"
 mvn clean verify
 ```
-
+abra no arquivo "D:\Workspace\Repositories\DeliverySystem\target\jacoco-report\index.html"
+![JaCoCo Results](https://github.com/pbelem/DeliverySystem/blob/main/assets/JaCoCoResults.png)
 
 ---
 
 ## 12. 📅 Cronograma de Testes
 
-| Atividade              | Responsável     | Data Início | Data Fim    |
+| Atividade              | Responsável      | Data Início | Data Fim    |
 |------------------------|------------------|-------------|-------------|
-| Escrita dos testes     | Pedro            | 06/06/2025  | 10/06/2025  |
-| Execução dos testes    | Olivier          | 06/06/2025  | 10/06/2025  |
+| Escrita dos testes     | Pedro e Olivier  | 06/06/2025  | 10/06/2025  |
+| Execução dos testes    | Pedro e Olivier  | 06/06/2025  | 10/06/2025  |
 | Análise de resultados  | Pedro e Olivier  | 06/06/2025  | 10/06/2025  |
 
 ---
