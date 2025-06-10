@@ -33,7 +33,7 @@ public class DeliveryServiceTest {
     }
 
     @Test
-    void testUpdateStatus_ValidStatus() {
+    void testUpdateStatus() {
         deliveryService.updateStatus(order, OrderStatus.PROCESSING);
         assertEquals(OrderStatus.PROCESSING, order.getStatus(), "Status deve ser atualizado para PROCESSING");
     }
